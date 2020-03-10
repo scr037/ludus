@@ -1,0 +1,2 @@
+class MartialArt < ApplicationRecord
+end

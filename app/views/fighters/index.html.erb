@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fighters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Gender</th>
+      <th>Date of birth</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Category</th>
+      <th>Martial art</th>
+      <th>Activity begin</th>
+      <th>Last payment</th>
+      <th>Notes</th>
+      <th>Image url</th>
+      <th>Image text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fighters.each do |fighter| %>
+      <tr>
+        <td><%= fighter.firstname %></td>
+        <td><%= fighter.lastname %></td>
+        <td><%= Gender.find(fighter.gender_id).name %></td>
+        <td><%= fighter.date_of_birth %></td>
+        <td><%= fighter.height %></td>
+        <td><%= fighter.weight %></td>
+        <td><%= Category.find(fighter.category_id).name %></td>
+        <td><%= MartialArt.find(fighter.martial_art_id).name %></td>
+        <td><%= fighter.activity_begin %></td>
+        <td><%= fighter.last_payment %></td>
+        <td><%= fighter.notes %></td>
+        <!-- <td><%= fighter.image_url %></td> -->
+        <!-- <td><%= fighter.image_text %></td> -->
+        <td><%= link_to 'Show', fighter %></td>
+        <td><%= link_to 'Edit', edit_fighter_path(fighter) %></td>
+        <td><%= link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fighter', new_fighter_path %>

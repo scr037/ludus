@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @fighter.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @fighter.lastname %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= Gender.find(@fighter.gender_id).name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @fighter.date_of_birth %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @fighter.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @fighter.weight %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= Category.find(@fighter.category_id).name %>
+</p>
+
+<p>
+  <strong>Martial art:</strong>
+  <%= MartialArt.find(@fighter.martial_art_id).name %>
+</p>
+
+<p>
+  <strong>Activity begin:</strong>
+  <%= @fighter.activity_begin %>
+</p>
+
+<p>
+  <strong>Last payment:</strong>
+  <%= @fighter.last_payment %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @fighter.notes %>
+</p>
+
+<!-- <p>
+  <strong>Image url:</strong>
+  <%= @fighter.image_url %>
+</p>
+
+<p>
+  <strong>Image text:</strong>
+  <%= @fighter.image_text %>
+</p> -->
+
+<%= link_to 'Edit', edit_fighter_path(@fighter) %> |
+<%= link_to 'Back', fighters_path %>

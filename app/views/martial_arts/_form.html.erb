@@ -1,0 +1,22 @@
+<%= form_with(model: martial_art, local: true) do |form| %>
+  <% if martial_art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(martial_art.errors.count, "error") %> prohibited this martial_art from being saved:</h2>
+
+      <ul>
+        <% martial_art.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
