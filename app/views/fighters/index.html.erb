@@ -7,6 +7,7 @@
     <tr>
       <th>Firstname</th>
       <th>Lastname</th>
+      <th>Phone</th>
       <th>Gender</th>
       <th>Date of birth</th>
       <th>Height</th>
@@ -27,6 +28,7 @@
       <tr>
         <td><%= fighter.firstname %></td>
         <td><%= fighter.lastname %></td>
+        <td><%= fighter.phone %></td>
         <td><%= Gender.find(fighter.gender_id).name %></td>
         <td><%= fighter.date_of_birth %></td>
         <td><%= fighter.height %></td>

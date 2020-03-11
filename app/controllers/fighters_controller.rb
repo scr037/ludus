@@ -40,6 +40,7 @@ class FightersController < ApplicationController
   # PATCH/PUT /fighters/1
   # PATCH/PUT /fighters/1.json
   def update
+    @fighter.avatar.attach(params[:avatar])
     respond_to do |format|
       if @fighter.update(fighter_params)
         format.html { redirect_to @fighter, notice: 'Fighter was successfully updated.' }
@@ -69,6 +70,6 @@ class FightersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fighter_params
-      params.require(:fighter).permit(:firstname, :lastname, :gender_id, :date_of_birth, :height, :weight, :category_id, :martial_art_id, :activity_begin, :last_payment, :notes, :image_url, :image_text)
+      params.require(:fighter).permit(:avatar, :firstname, :lastname, :gender_id, :date_of_birth, :height, :weight, :category_id, :martial_art_id, :activity_begin, :last_payment, :notes, :image_url, :image_text)
     end
 end

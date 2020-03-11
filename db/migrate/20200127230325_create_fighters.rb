@@ -3,6 +3,7 @@ class CreateFighters < ActiveRecord::Migration[6.0]
     create_table :fighters do |t|
       t.string :firstname
       t.string :lastname
+      t.string :phone
       t.references :gender, null: false, foreign_key: true
       t.date :date_of_birth
       t.integer :height
