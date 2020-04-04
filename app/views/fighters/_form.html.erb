@@ -11,79 +11,91 @@
     </div>
   <% end %>
 
-  <%= form.file_field :avatar %>
-
-  <div class="field">
-    <%= form.label :firstname %>
-    <%= form.text_field :firstname %>
+  <div class="form-group col-md-12">
+    <%= form.label "Photo"%>
+    <%= form.file_field :avatar %>
   </div>
 
-  <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname %>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= form.label :firstname%>
+      <%= form.text_field :firstname, class: 'form-control' %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :lastname %>
+      <%= form.text_field :lastname, class: 'form-control'  %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, class: 'form-control'  %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :gender_id %>
-    <%= form.select(:gender_id, Gender.all.collect { |v| [ v.name, v.id ] }, {}, { "data-placeholder": "Gender" }) %>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <%= form.label :gender_id %>
+      <%= form.select(:gender_id, Gender.all.collect { |v| [ v.name, v.id ] }, {}, { "data-placeholder": "Gender", :class => 'form-control' })%>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :height %>
+      <%= form.number_field :height, class: 'form-control'  %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :weight %>
+      <%= form.text_field :weight, class: 'form-control'  %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :date_of_birth %>
-    <%= form.date_select :date_of_birth %>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= form.label :martial_art_id %>
+      <%= form.select(:martial_art_id, MartialArt.all.collect { |v| [ v.name, v.id ] }, {}, { "data-placeholder": "Gender", :class => 'form-control'}) %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :category_id %>
+      <%= form.select(:category_id, Category.all.collect { |v| [ v.name, v.id ] }, {}, { "data-placeholder": "Category", :class => 'form-control' }) %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :height %>
-    <%= form.number_field :height %>
+  <div class="form-group">
+    <div class="form-inline col-md-12">
+      <%= form.label :date_of_birth %>
+    </div>
+    <div class="form-inline col-md-12">
+      <%= form.date_select :date_of_birth, { :order => [:day, :month, :year],  :start_year => 2000, :end_year => Date.today.year}, {:class => "form-control"}  %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :weight %>
-    <%= form.text_field :weight %>
-  </div>
+  <div class="delimiter">&#8193</div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.select(:category_id, Category.all.collect { |v| [ v.name, v.id ] }, {}, { "data-placeholder": "Category" }) %>
-  </div>
+  <div class="form-row">
+    <div class="form-inline col-md-12">
+      <%= form.label :activity_begin %>
+    </div>
+    <div class="form-inline col-md-12">
+      <%= form.date_select :activity_begin, { :order => [:month, :year],  :start_year => 2000, :end_year => Date.today.year}, {:class => "form-control"} %>
+    </div>
+    <div class="delimiter">&#8193</div>
+    <div class="form-inline col-md-12">
+      <%= form.label :last_payment %>
+    </div>
+    <div class="form-inline col-md-12">
+      <%= form.date_select :last_payment, { :order => [:month, :year],  :start_year => 2000, :end_year => Date.today.year}, {:class => "form-control"} %>
+    </div>
+  </div?
+  
+  
+  <div class="delimiter">&#8193</div>
 
-  <div class="field">
-    <%= form.label :martial_art_id %>
-    <%= form.select(:martial_art_id, MartialArt.all.collect { |v| [ v.name, v.id ] }, {}, { "data-placeholder": "Gender" }) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :activity_begin %>
-    <%= form.date_select :activity_begin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_payment %>
-    <%= form.date_select :last_payment %>
-  </div>
-
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :notes %>
-    <%= form.text_area :notes %>
+    <%= form.text_area :notes, class: 'form-control'  %>
   </div>
 
-  <!-- <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_text %>
-    <%= form.text_area :image_text %>
-  </div> -->
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions form-group col-md-12">
+    <%= form.submit 'Update', :class => 'btn btn-primary' %>
   </div>
 <% end %>

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "BFC LUDUS", welcome_index_path, class: "navbar-brand" %>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Luchadores", fighters_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/martial_arts">Artes Marciales</a></li>
+            <li><a href="/categories">Categorías</a></li>
+            <li><a href="/genders">Género</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+           <li><a href="#">Separated link</a></li>
+           <li><a href="#">One more separated link</a></li> -->
+         </ul>
+       </li>
+       <li><a href="#about">About</a></li>
+    </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
