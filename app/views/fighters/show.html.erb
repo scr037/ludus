@@ -3,13 +3,13 @@
 <div class="group-inline col-md-12">
   <%= image_tag url_for(@fighter.avatar), size: "100"%>
   <h1><%= @fighter.firstname %> <%= @fighter.lastname %></h1>
-  <%= link_to 'Edit', edit_fighter_path(@fighter) %> | <%= link_to 'Back', fighters_path %>
+  <%= link_to 'Editar', edit_fighter_path(@fighter) %> | <%= link_to 'Back', fighters_path %>
 </div>
 
 <div class="delimiter">&#8193</div>
 
 <div class="group-inline col-md-12">
-  <strong>Phone:</strong>
+  <strong>Teléfono:</strong>
   <%= @fighter.phone %>
 </div>
 
@@ -17,15 +17,15 @@
 
 <div class="form-row">
     <div class="form-group col-md-4">
-      <strong>Gender:</strong>
+      <strong>Género:</strong>
       <%= Gender.find(@fighter.gender_id).name %>
     </div>
     <div class="form-group col-md-4">
-      <strong>Height:</strong>
+      <strong>Altura (cm):</strong>
       <%= @fighter.height %>
     </div>
     <div class="form-group col-md-4">
-      <strong>Weight:</strong>
+      <strong>Peso (kg):</strong>
       <%= @fighter.weight %>
     </div>
 </div>
@@ -34,15 +34,15 @@
 
 <div class="form-row">
     <div class="form-group col-md-4">
-      <strong>Date of birth:</strong>
+      <strong>Fecha de nacimiento:</strong>
       <%= @fighter.date_of_birth %>
     </div>
     <div class="form-group col-md-4">
-      <strong>Activity begin:</strong>
+      <strong>Inicio de actividades:</strong>
       <%= @fighter.activity_begin %>
     </div>
     <div class="form-group col-md-4">
-      <strong>Last payment:</strong>
+      <strong>Último pago:</strong>
       <%= @fighter.last_payment %>
     </div>
 </div>
@@ -51,11 +51,11 @@
 
 <div class="form-row">
     <div class="form-group col-md-4">
-      <strong>Martial art:</strong>
+      <strong>Arte marcial:</strong>
       <%= MartialArt.find(@fighter.martial_art_id).name %>
     </div>
     <div class="form-group col-md-4">
-      <strong>Category:</strong>
+      <strong>Categoría:</strong>
       <%= Category.find(@fighter.category_id).description %>
     </div>
 </div>
@@ -65,6 +65,6 @@
 <div class="delimiter">&#8193</div>
 
 <div class="group-inline col-md-12">
-  <strong>Notes:</strong>
+  <strong>Notas:</strong>
   <%= @fighter.notes %>
 </div>

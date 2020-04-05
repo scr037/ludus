@@ -31,3 +31,53 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      category:
+        name: "Nombre"
+        gender_id: "Género"
+        weight: "Peso"
+      gender:
+        name: "Nombre"
+      martial_art:
+        name: "Nombre"
+      fighter:
+        avatar: "Ávatar"
+        firstname: "Nombre"
+        lastname: "Apellido"
+        phone: "Teléfono"
+        gender_id: "Género"
+        date_of_birth: "Fecha de Nacimiento"
+        height: "Altura (cm)"
+        weight: "Peso (kg)"
+        category_id: "Categoría"
+        martial_art_id: "Arte Marcial"
+        activity_begin: "Fecha de Incorporación (mes/año)"
+        last_payment: "Último Pago (mes/año)"
+        notes: "Notas"
+es:
+  hello: "Hello world"
+  activerecord:
+    attributes:
+      category:
+        name: "Nombre"
+        gender_id: "Género"
+        weight: "Peso"
+      gender:
+        name: "Nombre"
+      martial_art:
+        name: "Nombre"
+      fighter:
+        avatar: "Ávatar"
+        firstname: "Nombre"
+        lastname: "Apellido"
+        phone: "Teléfono"
+        gender_id: "Género"
+        date_of_birth: "Fecha de Nacimiento"
+        height: "Altura (cm)"
+        weight: "Peso (kg)"
+        category_id: "Categoría"
+        martial_art_id: "Arte Marcial"
+        activity_begin: "Fecha de Incorporación (mes/año)"
+        last_payment: "Último Pago (mes/año)"
+        notes: "Notas"
