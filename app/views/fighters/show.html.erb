@@ -1,78 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-<%= image_tag url_for(@fighter.avatar), size: "100"%>
-</p>
+<div class="group-inline col-md-12">
+  <%= image_tag url_for(@fighter.avatar), size: "100"%>
+  <h1><%= @fighter.firstname %> <%= @fighter.lastname %></h1>
+  <%= link_to 'Edit', edit_fighter_path(@fighter) %> | <%= link_to 'Back', fighters_path %>
+</div>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @fighter.firstname %>
-</p>
+<div class="delimiter">&#8193</div>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @fighter.lastname %>
-</p>
-
-<p>
+<div class="group-inline col-md-12">
   <strong>Phone:</strong>
   <%= @fighter.phone %>
-</p>
+</div>
 
-<p>
-  <strong>Gender:</strong>
-  <%= Gender.find(@fighter.gender_id).name %>
-</p>
+<div class="delimiter">&#8193</div>
 
-<p>
-  <strong>Date of birth:</strong>
-  <%= @fighter.date_of_birth %>
-</p>
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <strong>Gender:</strong>
+      <%= Gender.find(@fighter.gender_id).name %>
+    </div>
+    <div class="form-group col-md-4">
+      <strong>Height:</strong>
+      <%= @fighter.height %>
+    </div>
+    <div class="form-group col-md-4">
+      <strong>Weight:</strong>
+      <%= @fighter.weight %>
+    </div>
+</div>
 
-<p>
-  <strong>Height:</strong>
-  <%= @fighter.height %>
-</p>
+<div class="delimiter">&#8193</div>
 
-<p>
-  <strong>Weight:</strong>
-  <%= @fighter.weight %>
-</p>
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <strong>Date of birth:</strong>
+      <%= @fighter.date_of_birth %>
+    </div>
+    <div class="form-group col-md-4">
+      <strong>Activity begin:</strong>
+      <%= @fighter.activity_begin %>
+    </div>
+    <div class="form-group col-md-4">
+      <strong>Last payment:</strong>
+      <%= @fighter.last_payment %>
+    </div>
+</div>
 
-<p>
-  <strong>Category:</strong>
-  <%= Category.find(@fighter.category_id).name %>
-</p>
+<div class="delimiter">&#8193</div>
 
-<p>
-  <strong>Martial art:</strong>
-  <%= MartialArt.find(@fighter.martial_art_id).name %>
-</p>
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <strong>Martial art:</strong>
+      <%= MartialArt.find(@fighter.martial_art_id).name %>
+    </div>
+    <div class="form-group col-md-4">
+      <strong>Category:</strong>
+      <%= Category.find(@fighter.category_id).description %>
+    </div>
+</div>
 
-<p>
-  <strong>Activity begin:</strong>
-  <%= @fighter.activity_begin %>
-</p>
+<div class="delimiter">&#8193</div>
+<div class="delimiter">&#8193</div>
+<div class="delimiter">&#8193</div>
 
-<p>
-  <strong>Last payment:</strong>
-  <%= @fighter.last_payment %>
-</p>
-
-<p>
+<div class="group-inline col-md-12">
   <strong>Notes:</strong>
   <%= @fighter.notes %>
-</p>
-
-<!-- <p>
-  <strong>Image url:</strong>
-  <%= @fighter.image_url %>
-</p>
-
-<p>
-  <strong>Image text:</strong>
-  <%= @fighter.image_text %>
-</p> -->
-
-<%= link_to 'Edit', edit_fighter_path(@fighter) %> |
-<%= link_to 'Back', fighters_path %>
+</div>

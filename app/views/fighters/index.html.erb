@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Fighters</h1>
+<%= link_to 'New Fighter', new_fighter_path %>
+<br><br>
 
 <table class="table table-striped">
   <thead>
@@ -27,7 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Fighter', new_fighter_path %>
